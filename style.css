@@ -1,0 +1,15 @@
+body {
+    text-align: center;
+}
+
+.rotatingTitle {
+    color: purple;
+}
+
+.navbuttons {
+    display: flex;
+}
+
+.navbutton {
+    display: inline-flex;
+}

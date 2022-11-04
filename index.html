@@ -4,9 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+  <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
 </head>
 <body>
-    <h1>Hello World, and to my beautiful wife... ( ͡° ͜ʖ ͡°)</h1>
+    <header>
+        <div id="headerContainer">
+            <div id="navHeader">
+                <ul id="navButtons">
+                    <li class="navbutton"><button href="index.html">Home</button></li>
+                    <li class="navbutton"><button id="aboutMe">About Me</button></li>
+                    <li class="navbutton"><button id="resume">Resume</button></li>
+                    <li class="navbutton"><button id="projects">Projects</button></li>
+                    <li class="navbutton">
+                        <a href="https://github.com/a-champion">
+                            <button id="gitHub">GitHub</button>
+                        </a>
+                    </li>
+                    <li class="navbutton">
+                        <a href="https://www.linkedin.com/in/a-champion/">
+                            <button id="linkedin">Linkedin</button>
+                        </a>
+                    </li> 
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <h1>Lali-HO! I'm A Champion</h1>
+        <div id="indexContainer">
+            <p>I like to think im a <span class="rotatingTitle">hard working developer</span>.</p>
+            <button id="indexButton"></button>
+        </div>
+    </div>
 </body>
 </html>
