@@ -121,13 +121,13 @@ $(() => {
 
             const $h2 = $('<h2>');
 
-            const $projOne = $('<div>').attr('id','projectOne').css("background-image", "url(/img/monitor.jpg)").appendTo($projContainer);
+            const $projOne = $('<div>').attr('id','projectOne').css("background-image", "url(https://i.imgur.com/IO5TrIc.jpeg)").appendTo($projContainer);
 
-            $projOne.clone().attr('id','projectTwo').css("background-image", "url(/img/brackets.png)").appendTo($projContainer);
+            $projOne.clone().attr('id','projectTwo').css("background-image", "url(https://i.imgur.com/0dqdq3m.jpeg)").appendTo($projContainer);
 
             
 
-            $projOne.clone().attr('id', 'projectThree').css("background-image", "url(/img/soft-release.jpeg)").appendTo($projContainer);
+            $projOne.clone().attr('id', 'projectThree').css("background-image", "url(https://i.imgur.com/jp3vtik.png)").appendTo($projContainer);
             
 
             $h2.clone().text("Lorem Ipsum I").appendTo('#projectOne');
