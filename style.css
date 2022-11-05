@@ -1,5 +1,26 @@
+
 body {
-    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+header {
+    background-size: cover;
+    background-position: center;
+    background: lightslategray;
+    height: 10vh;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    line-height: 60px;
+}
+
+nav ul {
+    float: right;
+    margin: 0;
 }
 
 .rotatingTitle {
@@ -13,3 +34,31 @@ body {
 .navbutton {
     display: inline-flex;
 }
+
+/* #bioContainer {
+    display: none;
+}
+
+#resumeContainer {
+    display: none;
+}
+
+#projectsContainer {
+    display: none;
+}
+
+#projectsContainer div {
+
+}
+
+#projectOne {
+    background-image: url(/img/monitor.jpg);
+}
+
+#projectTwo {
+    background-image: url(/img/brackets.png);
+}
+
+#projectThree{
+    background-image: url(/img/soft-release.jpeg);
+} */
