@@ -1,4 +1,13 @@
 $(() => {
+    const changeNavOnScroll = () => {
+        if($(window).scrollTop()){
+            $('nav').addClass('top');
+        } else {
+            $('nav').removeClass('top');
+        }
+    }
+    $(window).on("scroll", changeNavOnScroll);
+
     const $rotatingTitle = $('.rotatingTitle');
 
     const $mainContainer = $('#mainContainer');
@@ -7,7 +16,6 @@ $(() => {
     
 
     const goResume = () => {
-
         const replaceWResume = () => {
            
 
@@ -115,13 +123,22 @@ $(() => {
         const replaceWProj = () =>{
             $mainContainer.empty();
 
-            const $projContainer = $('<div>').attr('id', 'projectsContainer').appendTo($mainContainer);
+            const $h1 = $('<h1>').text("Projects").css('text-align', 'center').appendTo($mainContainer);
 
-            const $h1 = $('<h1>').text("Projects").appendTo($projContainer);
+            const $projContainer = $('<div>').attr('id', 'projectsContainer').css("display", "flex").appendTo($mainContainer);
 
             const $h2 = $('<h2>');
+            
+            const $p = $('<p>');
 
-            const $projOne = $('<div>').attr('id','projectOne').css("background-image", "url(https://i.imgur.com/IO5TrIc.jpeg)").appendTo($projContainer);
+            const $projOne = $('<div>').attr('id','projectOne').css({
+                "background-image": "url(https://i.imgur.com/IO5TrIc.jpeg)",
+                "height": "150px",
+                "margin": "10px",
+                "padding": "5px",
+                "border-radius": "12px",
+                "overflow": "auto"
+            }).appendTo($projContainer);
 
             $projOne.clone().attr('id','projectTwo').css("background-image", "url(https://i.imgur.com/0dqdq3m.jpeg)").appendTo($projContainer);
 
@@ -135,6 +152,14 @@ $(() => {
             $h2.clone().text("Lorem Ipsum II").appendTo('#projectTwo');
 
             $h2.clone().text("Lorem Ipsum III").appendTo('#projectThree');
+
+            $p.clone().text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dolor augue, vestibulum id pharetra sit amet, vulputate sit amet nisi. Cras sed augue nec sapien faucibus pulvinar eget in massa. Integer sodales ex non magna elementum pretium. Suspendisse eleifend ligula vel metus finibus scelerisque ut vitae lectus. Integer id mattis neque, ac pretium risus. Pellentesque nec felis volutpat, commodo ipsum id, sollicitudin risus. Quisque id magna non nisi dapibus suscipit. Mauris nec tincidunt mi. Vivamus vulputate semper leo, vel sodales lacus convallis vel. Donec efficitur purus tincidunt nibh maximus, vel commodo ante tristique. Nulla facilisi. Sed vitae eros vehicula enim mollis luctus. Vivamus vel rutrum eros. Nullam mollis nec enim sit amet auctor. Suspendisse dictum tempus neque, sed interdum quam.").appendTo('#projectOne');
+
+            $p.clone().text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dolor augue, vestibulum id pharetra sit amet, vulputate sit amet nisi. Cras sed augue nec sapien faucibus pulvinar eget in massa. Integer sodales ex non magna elementum pretium. Suspendisse eleifend ligula vel metus finibus scelerisque ut vitae lectus. Integer id mattis neque, ac pretium risus. Pellentesque nec felis volutpat, commodo ipsum id, sollicitudin risus. Quisque id magna non nisi dapibus suscipit. Mauris nec tincidunt mi. Vivamus vulputate semper leo, vel sodales lacus convallis vel. Donec efficitur purus tincidunt nibh maximus, vel commodo ante tristique. Nulla facilisi. Sed vitae eros vehicula enim mollis luctus. Vivamus vel rutrum eros. Nullam mollis nec enim sit amet auctor. Suspendisse dictum tempus neque, sed interdum quam.").appendTo('#projectTwo');
+
+            $p.clone().text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dolor augue, vestibulum id pharetra sit amet, vulputate sit amet nisi. Cras sed augue nec sapien faucibus pulvinar eget in massa. Integer sodales ex non magna elementum pretium. Suspendisse eleifend ligula vel metus finibus scelerisque ut vitae lectus. Integer id mattis neque, ac pretium risus. Pellentesque nec felis volutpat, commodo ipsum id, sollicitudin risus. Quisque id magna non nisi dapibus suscipit. Mauris nec tincidunt mi. Vivamus vulputate semper leo, vel sodales lacus convallis vel. Donec efficitur purus tincidunt nibh maximus, vel commodo ante tristique. Nulla facilisi. Sed vitae eros vehicula enim mollis luctus. Vivamus vel rutrum eros. Nullam mollis nec enim sit amet auctor. Suspendisse dictum tempus neque, sed interdum quam.").appendTo('#projectThree');
+
+
 
 
 
