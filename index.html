@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
-  <script src="app.js"></script>
-  <link rel="stylesheet" href="style.css">
-    <title>Portfolio</title>
-</head>
-<body>
-    <header>
-        <nav>
-            <div id="navBar">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+        <script src="app.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Poiret+One&display=swap" rel="stylesheet">
+        <title>Portfolio</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div id="icon">icon</div>
                 <ul id="navButtons">
                     <li class="navbutton">
                         <a href="index.html" id="home">Home</a>
@@ -30,18 +33,24 @@
                         <a href="https://www.linkedin.com/in/a-champion/" target="_blank" id="linkedin">Linkedin</a>
                     </li> 
                 </ul>
+            </nav>
+            <div id="subNavAr">
+                <div id="subNav">
+                    <h1>Antonio Champion</h1>
+                    <p>Lali Ho! I like to think I'm a <span class="rotatingTitle">hard working developer</span>.</p>
+                    <div id="mainButton" class="projects" >View Projects</div>
+                </div>
             </div>
-        </nav>
-    </header>
+        </header>
 
-    <div id="mainContainer">
+        <div id="mainContainer">
 
-        
-        <div id="subContainer">
-            <h1>Lali-HO! I'm A Champion</h1>
-            <p>I like to think im a <span class="rotatingTitle">hard working developer</span>.</p>
-            <button class="projects"></button>
+            
+            <!-- <div id="subContainer">
+                <h1>Lali-HO! I'm A Champion</h1>
+                <p>I like to think im a <span class="rotatingTitle">hard working developer</span>.</p>
+                <a href="#" class="mainProj" class="navbutton" class="projects" >View Projects</a>
+            </div> -->
         </div>
-    </div>
-</body>
+    </body>
 </html>
