@@ -1,4 +1,14 @@
+
 $(() => {
+
+    // animation to move to element. 
+    const $moveTo = ($element) => {
+        $('html,body').animate({
+            scrollTop: $($element).offset().top},
+            'slow');
+    };
+
+    // sticky nav to add top class to navbar when scrolled to top
     const changeNavOnScroll = () => {
         if($(window).scrollTop()){
             $('nav').addClass('top');
@@ -8,7 +18,31 @@ $(() => {
     }
     $(window).on("scroll", changeNavOnScroll);
 
-    const $rotatingTitle = $('.rotatingTitle');
+    // playing with my homescreen trying to change text in span after interval (no luck yet but thats because moving was a pain)
+    const $changeText = () => {
+        const textArr = ['pokemon master', 'bad designer', 'creative', 'gamer', 'nerd', 'foodie', 'father','warrior of light',];
+        
+        const chooseString = () => {
+            let pickedString = textArr[Math.floor(Math.random() * textArr.length)];
+            return pickedString;
+        };
+
+        const $changingText = $('.rotatingTitle');
+        $changingText.text(chooseString());
+    };
+
+
+    const $rotatingTitle = () => {
+        const $changingText = $('.rotatingTitle');
+        $changingText.delay(2000).fadeOut(1000, $changeText);
+        $changingText.fadeIn(1000).delay(2000).fadeOut(1000, $changeText);
+        $changingText.fadeIn(1000);
+    };
+
+    const $textLoop = setInterval($rotatingTitle, 8000);
+
+    $rotatingTitle();
+    
 
     const $mainContainer = $('#mainContainer');
     const $subContainer = $('#subContainer');
@@ -21,6 +55,7 @@ $(() => {
 
             $mainContainer.empty();
 
+            const $placeHolder = $('<div>').attr('id','scrollPoint').appendTo($mainContainer);
             
             const $resumeContainer = $('<div>').attr('id','resumeContainer').appendTo($mainContainer);
 
@@ -72,8 +107,13 @@ $(() => {
 
             addXp();
             
+            $mainContainer.css('display','block');
+            $moveTo($placeHolder);
+            //previously used fadein wanted to incorporate with moveTo function however was not functional. 
+            //unsure of which I prefer. looking deeper into combining the two. maybe create and display the heading for each section
+            // then moving to that item while the rest of content fades in? perhaps.
 
-            $mainContainer.fadeIn(1250);
+            // $mainContainer.fadeIn(1250, $moveTo($resumeContainer));
         };
 
         $mainContainer.fadeOut(1250, replaceWResume);
@@ -89,6 +129,8 @@ $(() => {
 
         const replaceWBio = () => {
             $mainContainer.empty();
+
+            const $placeHolder = $('<div>').attr('id','scrollPoint').appendTo($mainContainer);
 
             const $bioContainer = $('<div>').attr('id','bioContainer').appendTo($mainContainer);
 
@@ -111,8 +153,9 @@ $(() => {
 
             $li.clone().text("Mobile - (xxx)-xxx-xxxx").appendTo($ul);
 
-
-            $mainContainer.fadeIn(1500);
+            $mainContainer.css('display','block');
+            $moveTo($placeHolder);
+            // $mainContainer.fadeIn(1500);
         };
         
         $mainContainer.fadeOut(1500, replaceWBio);
@@ -123,6 +166,8 @@ $(() => {
         const replaceWProj = () =>{
             $mainContainer.empty();
 
+            const $placeHolder = $('<div>').attr('id','scrollPoint').appendTo($mainContainer);
+
             const $h1 = $('<h1>').text("Projects").css('text-align', 'center').appendTo($mainContainer);
 
             const $projContainer = $('<div>').attr('id', 'projectsContainer').css("display", "flex").appendTo($mainContainer);
@@ -132,7 +177,7 @@ $(() => {
             const $p = $('<p>');
 
             const $projOne = $('<div>').attr('id','projectOne').css({
-                "background-image": "url(https://i.imgur.com/IO5TrIc.jpeg)",
+                "background-image": "url(/Users/acham/dev/portfolio/Portfolio/img/brackets.png)",
                 "height": "150px",
                 "margin": "10px",
                 "padding": "5px",
@@ -140,11 +185,11 @@ $(() => {
                 "overflow": "auto"
             }).appendTo($projContainer);
 
-            $projOne.clone().attr('id','projectTwo').css("background-image", "url(https://i.imgur.com/0dqdq3m.jpeg)").appendTo($projContainer);
+            $projOne.clone().attr('id','projectTwo').css("background-image", "url(/Users/acham/dev/portfolio/Portfolio/img/soft-release.jpeg)").appendTo($projContainer);
 
             
 
-            $projOne.clone().attr('id', 'projectThree').css("background-image", "url(https://i.imgur.com/jp3vtik.png)").appendTo($projContainer);
+            $projOne.clone().attr('id', 'projectThree').css("background-image", "url(/Users/acham/dev/portfolio/Portfolio/img/programming.jpg)").appendTo($projContainer);
             
 
             $h2.clone().text("Lorem Ipsum I").appendTo('#projectOne');
@@ -163,8 +208,9 @@ $(() => {
 
 
 
-
-            $mainContainer.fadeIn(1500);
+            $mainContainer.css('display','block');
+            $moveTo($placeHolder);
+            // $mainContainer.fadeIn(1500);
         }
         $mainContainer.fadeOut(1500, replaceWProj);
     };
