@@ -20,7 +20,7 @@ $(() => {
 
     // playing with my homescreen trying to change text in span after interval (no luck yet but thats because moving was a pain)
     const $changeText = () => {
-        const textArr = ['pokemon master', 'bad designer', 'creative', 'gamer', 'nerd', 'foodie', 'father','warrior of light',];
+        const textArr = ['pokemon master', 'bad designer', 'creative', 'gamer', 'nerd', 'foodie', 'husband', 'father','warrior of light',];
         
         const chooseString = () => {
             let pickedString = textArr[Math.floor(Math.random() * textArr.length)];
