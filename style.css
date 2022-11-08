@@ -11,6 +11,7 @@ header {
 }
 
 nav {
+    background-color: darkslateblue;
     display: flex;
     justify-content: space-between;
     
@@ -61,7 +62,7 @@ p {
 
 #mainButton {
     width: 100px;
-    height: 35px;
+    height: 50px;
     background-color: purple;
     color:white;
     border-radius: 25px;
@@ -192,7 +193,7 @@ li {
 
     #mainButton {
         width: 100px;
-        height: 35px;
+        height: 50px;
         background-color: purple;
         color:white;
         border-radius: 25px;
@@ -241,5 +242,14 @@ li {
     }
 
 }
+
+/* 
+
+.btn:hover{
+    transform: scale(1.2);
+}
+
+
+*/
 
 

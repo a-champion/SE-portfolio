@@ -4,9 +4,9 @@ $(() => {
     // animation to move to element. 
     const $moveTo = ($element) => {
         $('html,body').animate({
-            scrollTop: $($element).offset().top},
-            'slow');
-    };
+            scrollTop: $($element).offset().top},'slow'
+            );
+        };
 
     // sticky nav to add top class to navbar when scrolled to top
     const changeNavOnScroll = () => {
@@ -31,7 +31,7 @@ $(() => {
         $changingText.text(chooseString());
     };
 
-
+    // function to "animate" rotating title
     const $rotatingTitle = () => {
         const $changingText = $('.rotatingTitle');
         $changingText.delay(2000).fadeOut(1000, $changeText);
